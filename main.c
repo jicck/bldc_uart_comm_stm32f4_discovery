@@ -15,8 +15,8 @@
 #define TEST_WA_SIZE    THD_WORKING_AREA_SIZE(512)
 
 void main_printf(const char *fmt, ...) {
-	va_list ap;
 
+	va_list ap;
 	va_start(ap, fmt);
 	chvprintf((BaseSequentialStream*)&SDU1, fmt, ap);
 	va_end(ap);
@@ -85,5 +85,6 @@ int main(void) {
 			shelltp = NULL;           // Triggers spawning of a new shell.
 		}
 		chThdSleepMilliseconds(1000);
+		//jhlnihao
 	}
 }
